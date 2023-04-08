@@ -1,0 +1,121 @@
+
+<!-- Parabéns! O contador começa valendo 2 e a cada repetição ele é incrementado com mais dois. Sendo assim, teremos 2, 4, 6, 8... 
+    até chegar a 100! Quando o contador atingir 102 o while se recusará a repetir, assim, a próxima instrução será executada. -->
+
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var contador = 30;
+
+    while(contador <= 40) {
+
+        if( contador == 33 ) {
+        contador = contador + 1;
+        }
+        else if(contador == 37) {    
+            contador = contador + 1;
+        }
+        else {
+        mostra(contador);
+        contador = contador + 1; 
+        }
+      }
+
+    mostra("FIM");
+
+// comportamento  Parabéns, a lógica e requisitos estão corretosAtenção, você pode desenvolver outras formas de encontrar o mesmo resultado e esta é apenas uma sugestão. Continue estudando! //
+
+</script>
+
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var contador = 20;
+
+    while( contador >= 0) {
+
+      mostra(contador);
+      contador = contador - 1;
+    }
+
+    mostra("FIM");
+</script>
+
+    
+
+//Note que o incremento da variável anoCopa não é realizado dentro do while no código de Francisco, mas fora dele. Isso não está correto, pois o while nunca terá a chance de incrementar a variável e se não for incrementada, o programa ficará em um loop infinito.
+
+Para solucionar, basta mover a instrução anoCopa = anoCopa + 4 para dentro do while, depois de chamada a função mostra.//
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var anoCopa = 1930;
+    var limite = parseInt(prompt("Qual é o ano limite?"));
+
+    while(anoCopa <= limite) {
+
+     //   mostra(anoCopa + " tem copa!");
+        anoCopa = anoCopa + 4;
+    }
+
+    mostra("Ufa! Esses foram os anos de copa até " + limite);
+</script>
+
+<script>
+
+    function pulaLinha() {
+    
+        document.write("<br>");
+        document.write("<br>");
+    
+    }
+    
+    function mostra(frase) {
+    
+        document.write(frase);
+        pulaLinha();
+    
+    }
+    
+    var totalFamiliares = parseInt(prompt("Quantidade de familiares?"));
+    
+    var numero = 1;
+    while(numero <= totalFamiliares) {
+    var totalIdades = 0;
+        var idade = parseInt(prompt("Informe idade do familiar"));
+        totalIdades = totalIdades + idade;
+        numero++;
+    
+    }
+    var mediaDasIdades = totalIdades/totalFamiliares
+    mostra("A média das idades dos familiares é " + mediaDasIdades);
+    mostra("FIM");
+    </script>
+
+

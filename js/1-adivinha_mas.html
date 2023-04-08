@@ -1,0 +1,94 @@
+<meta charset="UTF-8">
+
+<input/>
+
+<button>Compare com meu segredo </button>
+
+<script>
+
+    var input = document.querySelector("input");
+
+    function verifica() {
+
+        if(input.velue == segredo) {
+
+  alert ("Voce ACERTOU!");
+
+} else {
+
+  alert("Voce ERROU!!!");   
+
+    }  
+}
+
+    var button = document.querySelector("button");
+    button.onclick = verificar;
+
+
+
+</script>
+
+<meta charset="UTF-8">
+
+<input />
+<button>Clique-me</button>
+
+<script>
+    var entrada = document.querySelector("input");
+    var botao = document.querySelector("button");
+</script>
+
+Você aprendeu que através de document.write escrevemos na tela, mas o document sabe fazer mais coisas. 
+É através de document.querySelector que podemos ir lá no mundo HTML e trazer o elemento para o mundo JavaScript para que possamos manipulá-lo.
+ Mas cuidado, o correto é querySelector com S maiúsculo. Se por acaso você escrever com 's' minúsculo cometerá um erro de sintaxe.
+
+Continuando... O document.querySelector recebe um parâmetro o nome da tag que desejamos buscar do mundo HTML. 
+Ele é mais poderoso do que você imagina e aceita receber outros tipos de parâmetros, mas para nosso treinamento, entender que se passarmos o nome de uma tag HTML 
+ele nos devolverá a tag no mundo JavaScript é suficiente. Há outros jargões envolvidos nesse processo, mas não se preocupe.
+ Você saberá todos eles se quiser continuar seus estudos na linguagem JavaScript.
+
+
+ <meta charset="UTF-8">
+
+<button>Clique-me</button>
+
+<script>
+    function tchau() {
+
+        alert("Tchau!!!!!")
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = tchau;
+
+</script>
+
+Aprendemos que é através de document.querySelector que buscamos um elemento (TAG) no mundo HTML e o trazemos para o mundo JavaScript.
+ No caso, é através da variável button, aquela que recebeu o retorno de document.querySelector que temos acesso à TAG <button>. Existem outros termos técnicos 
+    para tudo o que aconteceu aqui, mas eles não nos ajudam com lógica de programação.
+
+Muito bem, agora que temos o botão, se quisermos que ele chame a função tchau quando for clicado, 
+precisamos associar a função ao botão atribuindo a função à button.onclick. Mas cuidado, você deve fazer:
+
+    button.onclick = tchau;
+
+    <meta charset="UTF-8">
+
+<input/>
+<button>Exibir texto digitado</button>
+
+<script>
+    var input = document.querySelector("input");
+
+    function exibeTexto() {
+
+        alert(input.value);
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = exibeTexto;
+</script>
+
+Quando a função exibeTexto for chamada, ela passará como parâmetro da função alert o valor input.value.
+ Não podemos passar simplesmente input, porque o input corresponde a TAG e queremos dessa TAG seu valor (value). 
+ Por isso passamos input.value.

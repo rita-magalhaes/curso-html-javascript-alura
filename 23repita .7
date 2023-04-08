@@ -1,0 +1,85 @@
+<meta charset="UTF-8">
+<script>
+
+    // funções pulaLinha, mostra e sorteia omitidas
+
+    var numeroPensado = sorteia();
+
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+    if(chute == numeroPensado) {
+
+        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+
+    } else {
+
+        var contador = 1;
+
+        while( contador <= 10 ) {
+
+            mostra("Já era, você errou!");
+
+            chute = parseInt(prompt("Tente novamente. Qual você acha que é?"));
+
+            if(chute == numeroPensado) {
+                mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+                break;
+            }
+
+            contador = contador + 1;
+        }
+
+        if (contador > 10) {
+            mostra("Você esgotou todas as tentativas! Eu pensei no número " + numeroPensado);
+        }
+    }
+</script>
+
+//Lembre-se que while repetirá TODAS as instruções que estiverem dentro do seu bloco e a condição passada para ele for true. Veja que while recebe em seus parênteses () a expressão contador <= 10.
+
+Aprendemos que expressões como essa retornam true ou false. Sendo assim, quando no navegador interpretar a linha do while perguntará: o valor da variável contador é menor que ou igual a 10? Como a variável contador recebeu o valor 1 em sua inicialização o resultado da expressão contador <= 10 será true. Sendo assim, o while terá autorização para executar a instrução dentro do seu bloco, no caso, a instrução mostra("Você errou"); e a instrução contador = contador + 1.
+
+Faz sentido ele executar mostra("Já era, você errou!");, claro, mas você lembra a razão de fazermos contador = contador + 1? Veja que essa variável só existe por causa de uma finalidade: é ela que quebrará o lanço de repetição do while. A cada repetição do mostra, precisamos incrementá-la para saber que já mostramos, uma, duas, três vezes e por ai vai. Se não tivermos a instrução contador = contador + 1 nunca a condição passada para o while dará false e cairemos em uma repetição infinita, o famoso loop infinito.
+
+Alternativa correta
+//
+
+<meta charset="UTF-8">
+
+<script>
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    var maximoTentativas = 3;
+    var tentativaAtual = 1;
+
+    while(tentativaAtual <= maximoTentativas) {
+
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+
+        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+            alert("Bem-vindo ao sistema, " + loginInformado);
+
+            tentativaAtual = maximoTentativas; // acertou, então faço o gasto de todas as tentativas para sair do loop. Lá embaixo vai incrementar + 1! 
+
+        } else {
+
+            if (tentativaAtual == 3) {
+                alert("Número permitido de tentativas ultrapassado!");
+            } else {
+                alert("Login inválido. Tente novamente");
+            }
+        }
+
+       // vai para a próxima tentativa
+        tentativaAtual = tentativaAtual +1  
+    }
+
+</script>
+//Parabéns! O pulo do gato é o seguinte: se acertamos, atribuímos o valor 3 para a variável de incremento tentativaAtual e quando o código volta para o início do loop o resultado será falso, fazendo com que o loop deixe de ser executado. 
+Em vez de usar tentativaAtual = tentativaAtual + 1podemos utilizartentativaAtual++ que é um atalho para quando queremos incrementar uma variável.
+
+Isso nem chega perto da complexidade de criar um sistema de autenticação (login de usuários), mas brincar com o tema com certeza é um incentivo para que você continue no universo da programação. Continue estudando!

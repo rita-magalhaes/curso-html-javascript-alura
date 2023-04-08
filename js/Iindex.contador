@@ -1,0 +1,44 @@
+A instrução for é dividida em três partes que são separadas por ponto e vírgula. 
+A primeira é destinada a variável de incremento, a segundo à condição de repetição e a última ao incremento da variável de incremento.
+
+Aliás, quando queremos incrementar de um em um, podemos usar o pós incremento:
+
+for( var contador = 1; contador <= 10; contador++ ) {
+    alert("Contador atual: " + contador);
+}COPIAR CÓDIGO
+Veja que usamos contador++ no lugar de contador = contador + 1. A primeira forma é muito mais enxuta.
+
+
+
+
+<script>
+var i = 0;
+while( i < 10) {
+    alert( "O resultado é " + (2 * i) );
+    i++;    
+}
+</script>
+//quando podemos usar o while //
+
+Tanto o while() quanto o for() são utilizados em estruturas criadas para repetir instruções, ou seja, estruturas de loops. 
+A escolha entre um e outro é questão de gosto e legibilidade. 
+Com o tempo você saberá quando um é melhor do que o outro, o importante, neste momento, é conhecer as duas estruturas
+
+
+Aprendemos a utilizar parseInt() para converter um texto em número. Certo? Contudo, 
+ele converte um texto para um número inteiro e nem sempre queremos abdicar dos números decimais. Como podemos então para converter em “números reais”?
+
+Vejamos um exemplo:
+
+var numero = parseInt("12.13");
+
+O valor de numero será 12. Para que as casas decimais sejam mantidas, usamos o método parseFloat():
+
+var numero = parseFloat("12.13");
+
+O valor de numero será 12.13.
+
+Não é necessário usar o parseFloat() quando lemos os dados de peso e altura no cálculo do IMC,
+ pois são como operações de divisão e multiplicação. O JavaScript já realiza a conversão implícita para nós. Contudo,
+  é uma boa prática usar parseInt() ou parseFloat() se queremos ler números inteiros ou decimais fornecido pela função prompt.
+   Nem sempre a conversão implícita vai dar certo, como é o caso do número de vitórias e empates.

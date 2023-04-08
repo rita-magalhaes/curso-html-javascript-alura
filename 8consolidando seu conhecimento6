@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() {
+    document.write("<br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+function sorteia(n) {
+    return Math.floor(Math.random() * (n + 1));
+}
+
+var numeroPensado = sorteia(100);
+
+var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+if (chute === numeroPensado) {
+    mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+} else {
+    mostra("Poxa! Não foi dessa vez. Eu pensei no número " + numeroPensado);
+}
+
+</script>
+
+
+
+// Outra forma seria fazer isNaN(idade) == true, mas não é 
+necessário testar se true é igual a true, o resultado será true. 
+É por isso que passamos direto para o while isNan(idade) que retorna já verdadeiro ou falso.//
+
+<script>
+    
+    var idade = parseInt(prompt("Digite sua idade"));
+    
+    while( isNaN(idade) ) {
+        idade = parseInt(prompt("Digite sua idade"));    
+    }
+    
+    alert(idade);
+    </script>
